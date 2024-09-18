@@ -1,0 +1,399 @@
+/* Import Tailwind CSS base, components, and utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+/* Apply background gradient to body */
+body {
+  background: linear-gradient(167deg, hsl(0, 0%, 0%) 1.1%, hsl(224, 83%, 19%) 100%);
+  height: screen; /* Full viewport height */
+  width: 100%;  
+  font-family: 'Roboto', sans-serif; /* Full width */
+}
+
+/* Apply global styles for nav */
+nav {
+  @apply flex mb-16 pt-3 w-full;
+}
+
+/* Style for nav links */
+.nav_link {
+  @apply text-gray-200 no-underline px-5 hover:text-gray-400;
+}
+
+/* Container for nav links */
+.nav_link_container {
+  @apply flex flex-1 justify-center hidden sm:flex;
+}
+
+/* Icon styles */
+.icon {
+  @apply w-12 h-12 cursor-pointer rounded-full ;
+}
+.logo_icon{
+  @apply w-12 h-12 cursor-pointer rounded-full  opacity-0;
+}
+
+
+/* Icon container styles */
+.icon_container{
+  @apply flex items-baseline gap-7 max-sm:justify-end max-sm:flex-1;
+}
+
+
+/* Dropdown styles */
+/* Dropdown container styles */
+.dropdown {
+  @apply fixed top-16 right-1 mt-3 p-5 rounded-lg min-w-[210px] flex flex-col gap-2 items-end bg-gradient-to-br from-[#1e2a78] to-white max-w-fit z-50;
+}
+
+/* Dropdown link styles */
+.dropdown_link {
+  @apply text-sm font-medium text-black cursor-pointer;
+  transition:  0.4s ease-in-out;
+}
+
+/* Hover state for dropdown links */
+.dropdown_link:hover {
+  @apply text-white;
+}
+
+.hamburger{
+  @apply w-12 h-12 cursor-pointer rounded-full lg:hidden
+}
+.header{
+  @apply sticky top-0 left-0 z-[1] w-full py-5 px-5 sm:px-10 bg-gradient-to-br from-black to-[rgb(30,42,120)] h-[15vh] 
+
+}
+.header{
+  background: linear-gradient(167deg, hsl(0, 0%, 0%) 1.1%, hsl(224, 83%, 19%) 100%);
+
+
+}
+.nav{
+  @apply flex justify-between items-center mb-16 pt-3 w-full max-w-screen-xl mx-auto
+}
+.hero {
+  @apply relative w-[100vw] h-[85vh] mt-[2vh] mb-[2vh] py-[2vh] px-[5vw] 
+}
+
+.hero_p{
+  @apply opacity-0
+}
+
+.hero_vid {
+  @apply absolute top-0 left-0 w-full h-full object-cover z-[-1] px-2 rounded-sm
+}
+
+.hero_container {
+  @apply relative h-[95%] flex flex-col  justify-center pl-[2rem] text-white
+  /* Center all child elements vertically and horizontally */
+}
+
+.video_content {
+  @apply max-w-[500px] flex flex-col sm:mr-[20px] sm:items-center
+  /* Show content on all devices; Align content on larger screens */
+}
+
+.logo {
+  @apply w-[10vh] h-auto
+}
+
+h1 {
+  @apply text-[3.5rem] mb-5
+}
+
+p {
+  @apply text-[1.25rem] leading-[1.5]
+}
+
+.stack {
+  @apply flex flex-row items-center space-x-4 mb-4
+}
+
+
+.button2 {
+  @apply  text-white rounded-full py-2 px-4 m-2
+}
+.button1{
+  @apply bg-transparent border border-white text-white rounded-full py-2 px-6 m-2
+
+}
+.button2{
+  background: linear-gradient(167deg, hsl(0, 4%, 85%) 1.1%, hsl(224, 83%, 19%) 100%);
+
+}
+.button1:hover{
+  background-color: black;
+  transition-duration: 0.4s;
+  transition-delay:0.1s;
+  cursor: pointer;
+  padding-left: 30px;
+}
+.button2:hover{
+  background-color: transparent;
+  border: 1px solid white;
+  transition-duration: 0.4s;
+  transition-delay:0.1s;
+  cursor: pointer;
+  padding-left: 30px;
+}
+
+
+.buttons {
+  @apply flex flex-row  sm:items-start sm:mb-[130px]
+  /* Center buttons on small devices; Align left on larger devices and move down on small devices */
+}
+
+.questions{
+  @apply px-6 sm:px-8 py-4 bg-blue-800 text-white rounded-lg m-4  ml-7 sm:mx-12 sm:ml-16
+}
+.acc_btn{
+  @apply flex justify-between w-full
+}
+.answer_style{
+  @apply grid overflow-hidden transition-all duration-300 ease-in-out text-slate-400 text-sm
+}
+.answer_style1{
+  @apply grid-rows-[1fr] opacity-100
+}
+.answer_style2{
+  @apply grid-rows-[0fr] opacity-0
+}
+.answer{
+  @apply overflow-hidden
+}
+
+.highlights_section{
+  @apply w-screen overflow-hidden h-full sm:py-32 py-20 sm:px-10 px-5
+
+}
+.highlights_section{
+  background: linear-gradient(167deg, hsl(0, 0%, 0%) 1.1%, hsl(224, 83%, 19%) 100%);
+
+}
+.screen-max-width {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  position: relative;
+  max-width: 1120px;
+}
+.section-heading {
+  @apply text-gray-600 lg:text-6xl md:text-5xl text-3xl lg:mb-4 mb-8 font-medium opacity-100 translate-y-0
+}
+.sec{
+  @apply mb-12 w-full md:flex items-end justify-between
+}
+.links{
+  @apply flex flex-wrap items-end gap-5
+}
+.link {
+  @apply text-white hover:text-blue-600 hover:underline cursor-pointer flex items-center text-sm opacity-100 translate-y-0
+}
+.carousel_contain{
+  @apply flex items-center
+}
+.video-carousel_container {
+  @apply relative sm:w-[70vw] w-[88vw] md:h-[70vh] sm:h-[50vh] h-[35vh]
+}
+.contain{
+  @apply sm:pr-20 pr-10
+}
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center
+  }
+}
+.video-container{
+  @apply w-full h-full flex flex-center rounded-xl overflow-hidden bg-black
+}
+.slider_text_div{
+  @apply absolute top-12 left-[5%] z-10 flex flex-col
+}
+.slider_text{
+ @apply md:text-lg text-lg font-medium text-white 
+}
+.progress_buttons{
+  @apply relative flex-center mt-10
+}
+.progress_tracker{
+  @apply flex-center py-5 px-7 bg-black backdrop-blur rounded-full
+}
+.track_buttons{
+  @apply mx-2 w-3 h-3 bg-gray-300 rounded-full relative cursor-pointer
+}
+.idk{
+  @apply absolute h-full w-full rounded-full
+}
+.control-btn {
+  @apply ml-4 p-4 rounded-full bg-black backdrop-blur flex-center
+}
+.games_heading{
+  @apply text-white font-bold md:text-xl p-4 mx-5 my-4 sm:my-4 sm:mx-14
+}
+.games_container{
+  @apply relative flex flex-row flex-wrap
+}
+.games_yes{
+  @apply flex flex-row overflow-x-auto scroll-smooth scrollbar-hide
+}
+.game_container{
+  @apply w-[45vw] h-[65vh] sm:w-[20vw] cursor-pointer relative  p-2 mx-5 my-4 sm:my-4 sm:mx-14  border-black rounded-xl flex flex-col justify-center items-center
+}
+.game_container{
+  background-color: #19223E;
+}
+.game_content{
+  @apply flex flex-row ml-2 text-white  flex-wrap  w-[35vw] sm:w-[20vw]
+  
+}
+.game_image{
+  @apply h-[200px] w-[160px] rounded-lg 
+}
+.game_image:hover{
+  box-shadow: 10px 10px 10px  blue;
+  z-index: 10;
+}
+.h3{
+  @apply text-[18px] 
+}
+.p{
+  @apply text-[12px]
+}
+.chevron1{
+  @apply bg-white rounded-full absolute left-0 opacity-50 hover:opacity-100 cursor-pointer z-10
+}
+.chevron2{
+  @apply bg-white rounded-full absolute right-0 opacity-50 hover:opacity-100 cursor-pointer z-10
+}
+.product_section{
+  @apply mx-12 my-7
+}
+
+.the_buttons{
+  @apply flex justify-between py-3 sm:py-2 px-4 sm:px-9
+}
+.product_button{
+  @apply px-[10px] sm:px-5 text-[12px] sm:text-[20px] text-white bg-black rounded-lg hover:text-black hover:bg-white;
+  transition-duration: 0.4s;
+  transition-delay: 0.2;
+} 
+.product_button.active{
+  color:#19223E;
+  background-color: white
+}
+
+.product1{
+  @apply h-[80vh] bg-black text-white m-4 rounded-lg
+}
+.product2{
+  @apply h-[80vh] text-white rounded-lg;
+  background: linear-gradient(167deg, hsl(0, 0%, 0%) 1.1%, hsl(224, 83%, 19%) 100%);
+
+}
+.product3{
+  @apply h-[80vh] text-black bg-white rounded-lg
+}
+.product4{
+  @apply h-[80vh] bg-white text-black rounded-lg
+}
+.black_ps{
+  @apply  w-[70%] max-w-[600px] h-auto m-auto rounded-lg
+}
+.heading{
+  @apply m-5
+}
+.para{
+  @apply m-5 text-[15px]
+}
+.eric{
+  @apply  w-[50%] max-w-[300px] h-auto m-auto rounded-lg;
+
+
+}
+
+.headset{
+  @apply  w-[70%] max-w-[600px] h-auto m-auto rounded-lg
+
+}
+
+.white_ps{
+  @apply  w-[70%] max-w-[600px] h-auto m-auto rounded-lg
+}
+.footer {
+  background: linear-gradient(167deg, hsl(0, 0%, 0%) 1.1%, hsl(224, 83%, 19%) 100%);
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+.footer-news h1 {
+  font-size: 3em;
+  margin-bottom: 40px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 20px;
+}
+
+.footer-section h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.ps6-logo {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.logo-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.h2{
+  @apply mx-2
+}
